@@ -9,4 +9,9 @@
 'use strict';
 
 module.exports = function(grunt) {
-}
+
+    grunt.registerMultiTask('h5bp_cachebuster', 'add assets timestamp in css files', function () {
+
+    });
+
+};
