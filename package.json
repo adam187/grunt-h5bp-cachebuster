@@ -1,0 +1,25 @@
+{
+  "name": "grunt-h5bp-cachebuster",
+  "version": "0.0.1",
+  "description": "Grunt task to version assets in css files",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adam187/grunt-h5bp-cachebuster.git"
+  },
+  "keywords": [
+    "cachebuster"
+  ],
+  "author": {
+    "name": "Adam Misiorny",
+    "email": "adam.misiorny@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adam187/grunt-h5bp-cachebuster/issues"
+  },
+  "homepage": "https://github.com/adam187/grunt-h5bp-cachebuster"
+}
