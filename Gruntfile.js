@@ -25,7 +25,14 @@ module.exports = function(grunt) {
       },
     },
 
-    asset_cachebuster: {
+    h5bp_cachebuster: {
+      css_bust: {
+        expand: true,
+        cwd: 'tests/fixtures',
+        src: 'css/*.css',
+        dest: 'tmp/',
+        ext: '.css'
+      },
     },
 
     // Before generating any new files, remove any previously-created files.

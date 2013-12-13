@@ -1,0 +1,21 @@
+
+body {
+  background: url(../images/body.6581.jpg);
+  background: url('../images/body.6581.jpg');
+  background: url("../images/body.6581.jpg");
+  background: url( "../images/body.6581.jpg" );
+}
+
+header {
+  background-image: url(../images/header.bg.965.gif);
+  background-image: url('../images/header.bg.965.gif');
+  background-image: url("../images/header.bg.965.gif");
+  background-image: url( "../images/header.bg.965.gif" );
+}
+
+footer {
+  background-image: url(../images/subDir/footer.63612.png);
+  background-image: url('../images/subDir/footer.63612.png');
+  background-image: url("../images/subDir/footer.63612.png");
+  background-image: url( "../images/subDir/footer.63612.png" );
+}

@@ -1,0 +1,21 @@
+
+body {
+  background: url(../images/body.jpg);
+  background: url('../images/body.jpg');
+  background: url("../images/body.jpg");
+  background: url( "../images/body.jpg" );
+}
+
+header {
+  background-image: url(../images/header.bg.gif);
+  background-image: url('../images/header.bg.gif');
+  background-image: url("../images/header.bg.gif");
+  background-image: url( "../images/header.bg.gif" );
+}
+
+footer {
+  background-image: url(../images/subDir/footer.png);
+  background-image: url('../images/subDir/footer.png');
+  background-image: url("../images/subDir/footer.png");
+  background-image: url( "../images/subDir/footer.png" );
+}
