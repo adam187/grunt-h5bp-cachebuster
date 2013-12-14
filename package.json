@@ -22,13 +22,15 @@
     "url": "https://github.com/adam187/grunt-h5bp-cachebuster/issues"
   },
   "homepage": "https://github.com/adam187/grunt-h5bp-cachebuster",
+  "dependencies": {
+    "crc": "~0.2.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.0"
+  },
   "devDependencies": {
-    "grunt": "~0.4.2",
     "grunt-contrib-jshint": "~0.7.2",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-nodeunit": "~0.2.2"
-  },
-  "dependencies": {
-    "crc": "~0.2.1"
   }
 }
