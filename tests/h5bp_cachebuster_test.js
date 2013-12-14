@@ -6,7 +6,7 @@ var grunt = require('grunt');
 exports.h5bp_cachebuster = {
 
   css_bust: function(test) {
-    test.expect(3);
+    test.expect(5);
 
     var taskConfig = grunt.config.get('h5bp_cachebuster.css_bust_all_files'),
         expectedConfig = {
@@ -19,8 +19,13 @@ exports.h5bp_cachebuster = {
 
     test.deepEqual(taskConfig, expectedConfig, 'config sould be the same');
 
-    test.ok(grunt.file.exists('tmp/css/style.css'), 'should create style.css file');
-    test.ok(grunt.file.exists('tmp/css/print.css'), 'should create print.css file');
+    ['style.css', 'print.css'].forEach(function(file) {
+      var actual, expected;
+      test.ok(grunt.file.exists('tmp/css/' + file), 'should create ' + file + ' file');
+      actual = grunt.file.read('tmp/css/' + file);
+      expected = grunt.file.read('tests/expected/css/' + file);
+      test.equal(actual, expected, 'CSS urls should have checksum');
+    });
 
     test.done();
   }
