@@ -61,6 +61,8 @@ module.exports = function(grunt) {
             } else {
               grunt.log.warn('Asset file "' + filePath + '" not found.');
             }
+          } else {
+            grunt.verbose.writeln('Skipping "' + parsedUrl.file + '"');
           }
 
         });
