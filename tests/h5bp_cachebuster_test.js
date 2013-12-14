@@ -11,15 +11,15 @@ exports.h5bp_cachebuster = {
     var taskConfig = grunt.config.get('h5bp_cachebuster.css_bust_all_files'),
         expectedConfig = {
         expand: true,
-        cwd: 'tests/fixtures',
-        src: 'css/*.css',
-        dest: 'tmp/',
+        cwd: 'tests/fixtures/css/',
+        src: '**/*.css',
+        dest: 'tmp/css/',
         ext: '.css'
       };
 
     test.deepEqual(taskConfig, expectedConfig, 'config sould be the same');
 
-    ['style.css', 'print.css', 'min.css', 'base64.css'].forEach(function(file) {
+    ['style.css', 'sub-folder/print.css', 'min.css', 'base64.css'].forEach(function(file) {
       var actual, expected;
       test.ok(grunt.file.exists('tmp/css/' + file), 'should create ' + file + ' file');
       actual = grunt.file.read('tmp/css/' + file);

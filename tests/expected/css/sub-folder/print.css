@@ -1,21 +1,28 @@
 
 footer {
-  background-image: url(../images/subDir/footer.1792977228.png);
-  background-image: url('../images/subDir/footer.1792977228.png');
-  background-image: url("../images/subDir/footer.1792977228.png");
-  background-image: url( "../images/subDir/footer.1792977228.png" );
+  background-image: url(../../images/subDir/footer.1792977228.png);
+  background-image: url('../../images/subDir/footer.1792977228.png');
+  background-image: url("../../images/subDir/footer.1792977228.png");
+  background-image: url( "../../images/subDir/footer.1792977228.png" );
 }
 
 header {
-  background-image: url(../images/header.bg.174641432.gif);
-  background-image: url('../images/header.bg.174641432.gif');
-  background-image: url("../images/header.bg.174641432.gif");
-  background-image: url( "../images/header.bg.174641432.gif" );
+  background-image: url(../../images/header.bg.174641432.gif);
+  background-image: url('../../images/header.bg.174641432.gif');
+  background-image: url("../../images/header.bg.174641432.gif");
+  background-image: url( "../../images/header.bg.174641432.gif" );
 }
 
 body {
-  background: url(../images/body.195457394.jpg);
-  background: url('../images/body.195457394.jpg');
-  background: url("../images/body.195457394.jpg");
-  background: url( "../images/body.195457394.jpg" );
+  background: url(../../images/body.195457394.jpg);
+  background: url('../../images/body.195457394.jpg');
+  background: url("../../images/body.195457394.jpg");
+  background: url( "../../images/body.195457394.jpg" );
+}
+
+.remote-file {
+  background-image: url(http://dummy.domain/images/dummy-dir/dummy-image.png);
+  background-image: url('http://dummy.domain/images/dummy-dir/dummy-image.png');
+  background-image: url("http://dummy.domain/images/dummy-dir/dummy-image.png");
+  background-image: url( "http://dummy.domain/images/dummy-dir/dummy-image.png" );
 }

@@ -1,21 +1,28 @@
 
 footer {
-  background-image: url(../images/subDir/footer.png);
-  background-image: url('../images/subDir/footer.png');
-  background-image: url("../images/subDir/footer.png");
-  background-image: url( "../images/subDir/footer.png" );
+  background-image: url(../../images/subDir/footer.png);
+  background-image: url('../../images/subDir/footer.png');
+  background-image: url("../../images/subDir/footer.png");
+  background-image: url( "../../images/subDir/footer.png" );
 }
 
 header {
-  background-image: url(../images/header.bg.gif);
-  background-image: url('../images/header.bg.gif');
-  background-image: url("../images/header.bg.gif");
-  background-image: url( "../images/header.bg.gif" );
+  background-image: url(../../images/header.bg.gif);
+  background-image: url('../../images/header.bg.gif');
+  background-image: url("../../images/header.bg.gif");
+  background-image: url( "../../images/header.bg.gif" );
 }
 
 body {
-  background: url(../images/body.jpg);
-  background: url('../images/body.jpg');
-  background: url("../images/body.jpg");
-  background: url( "../images/body.jpg" );
+  background: url(../../images/body.jpg);
+  background: url('../../images/body.jpg');
+  background: url("../../images/body.jpg");
+  background: url( "../../images/body.jpg" );
+}
+
+.remote-file {
+  background-image: url(http://dummy.domain/images/dummy-dir/dummy-image.png);
+  background-image: url('http://dummy.domain/images/dummy-dir/dummy-image.png');
+  background-image: url("http://dummy.domain/images/dummy-dir/dummy-image.png");
+  background-image: url( "http://dummy.domain/images/dummy-dir/dummy-image.png" );
 }

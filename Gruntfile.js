@@ -28,9 +28,9 @@ module.exports = function(grunt) {
     h5bp_cachebuster: {
       css_bust_all_files: {
         expand: true,
-        cwd: 'tests/fixtures',
-        src: 'css/*.css',
-        dest: 'tmp/',
+        cwd: 'tests/fixtures/css/',
+        src: '**/*.css',
+        dest: 'tmp/css/',
         ext: '.css'
       },
     },
