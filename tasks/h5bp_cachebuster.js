@@ -32,7 +32,7 @@ module.exports = function(grunt) {
     };
 
     urlParse = function(url) {
-      var m = url.match(/(url\( *['"]?)(([A-Za-z0-9_\-\.\/:;,]+)(\.(jpe?g|png|gif|svg)))(['"]? *\))/i);
+      var m = url.match(/(url\( *['"]?)(([A-Za-z0-9_\-\.\/:;,]+)(\.(jpg|png|gif)))(['"]? *\))/i);
       return m ? {url: m[0], prefix: m[1], file: m[2], base: m[3], ext: m[5], sufix: m[6]} : null;
     };
 
