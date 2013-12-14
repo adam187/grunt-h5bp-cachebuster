@@ -1,7 +1,7 @@
 {
   "name": "grunt-h5bp-cachebuster",
   "version": "0.0.1",
-  "description": "Grunt task to version assets in css files",
+  "description": "Grunt task to version assets in css files for html5boilerplate .htaccess snippet",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "grunt test"
