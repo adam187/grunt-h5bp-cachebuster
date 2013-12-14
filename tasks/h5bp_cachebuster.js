@@ -11,17 +11,13 @@
 module.exports = function(grunt) {
 
   grunt.registerMultiTask('h5bp_cachebuster', 'add assets checksum in css files', function () {
-    var crc, options, onlyUnique, findUrls, getBasePath, urlParse, isBase64, isLocalFile, generateChecksum, cssBust;
+    var crc, options, findUrls, getBasePath, urlParse, isBase64, isLocalFile, generateChecksum, cssBust;
 
     crc = require('crc');
 
     options = this.options({
       algorithm: 'crc32'
     });
-
-    onlyUnique = function (value, index, self) {
-      return self.indexOf(value) === index;
-    };
 
     findUrls = function(source) {
       return source.match(/url\([^\)]+\)/gi);
@@ -56,7 +52,7 @@ module.exports = function(grunt) {
       urls = findUrls(source);
 
       if (urls) {
-        urls.filter(onlyUnique).forEach(function(url) {
+        urls.forEach(function(url) {
           var parsedUrl, filePath, checksum, replacement;
 
           parsedUrl = urlParse(url);

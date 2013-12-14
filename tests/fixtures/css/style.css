@@ -26,3 +26,20 @@ footer {
   background-image: url("http://dummy.domain/images/dummy-dir/dummy-image.png");
   background-image: url( "http://dummy.domain/images/dummy-dir/dummy-image.png" );
 }
+
+.duplicates {
+  background: url(../images/body.jpg);
+  background: url('../images/body.jpg');
+  background: url("../images/body.jpg");
+  background: url( "../images/body.jpg" );
+
+  background: url(../images/header.bg.gif);
+  background: url('../images/header.bg.gif');
+  background: url("../images/header.bg.gif");
+  background: url( "../images/header.bg.gif" );
+
+  background-image: url(../images/subDir/footer.png);
+  background-image: url('../images/subDir/footer.png');
+  background-image: url("../images/subDir/footer.png");
+  background-image: url( "../images/subDir/footer.png" );
+}
