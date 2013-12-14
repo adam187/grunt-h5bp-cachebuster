@@ -10,7 +10,7 @@
 
 module.exports = function(grunt) {
 
-  grunt.registerMultiTask('h5bp_cachebuster', 'add assets timestamp in css files', function () {
+  grunt.registerMultiTask('h5bp_cachebuster', 'add assets checksum in css files', function () {
     var crc, options, onlyUnique, findUrls, getBasePath, urlParse, isLocalFile, generateChecksum, cssBust;
 
     crc = require('crc');
