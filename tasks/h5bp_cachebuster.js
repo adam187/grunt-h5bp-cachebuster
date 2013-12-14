@@ -45,12 +45,19 @@ module.exports = function(grunt) {
 
       if (urls) {
         urls.forEach(function(url) {
-          var parsedUrl, checksum, replacement;
+          var parsedUrl, filePath, checksum, replacement;
 
           parsedUrl = urlParse(url);
-          checksum = generateChecksum(basePath + parsedUrl.file, options.algorithm);
-          replacement = parsedUrl.prefix + parsedUrl.base + '.' + checksum + '.' + parsedUrl.ext + parsedUrl.sufix;
-          source = source.replace(parsedUrl.url, replacement);
+          filePath = basePath + parsedUrl.file;
+
+          if (grunt.file.exists(filePath)) {
+            checksum = generateChecksum(filePath, options.algorithm);
+            replacement = parsedUrl.prefix + parsedUrl.base + '.' + checksum + '.' + parsedUrl.ext + parsedUrl.sufix;
+            source = source.replace(parsedUrl.url, replacement);
+          } else {
+            grunt.log.warn('Asset file "' + filePath + '" not found.');
+          }
+
         });
       }
 
