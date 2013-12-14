@@ -24,7 +24,7 @@ module.exports = function(grunt) {
     };
 
     findUrls = function(source) {
-      return source.match(/url\(.*\)/gi);
+      return source.match(/url\([^\)]+\)/gi);
     };
 
     generateChecksum = function (filePath, algorithm) {
