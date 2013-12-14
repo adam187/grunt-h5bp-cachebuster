@@ -11,7 +11,7 @@
 module.exports = function(grunt) {
 
   grunt.registerMultiTask('h5bp_cachebuster', 'add assets checksum in css files', function () {
-    var crc, options, onlyUnique, findUrls, getBasePath, urlParse, isLocalFile, generateChecksum, cssBust;
+    var crc, options, onlyUnique, findUrls, getBasePath, urlParse, isBase64, isLocalFile, generateChecksum, cssBust;
 
     crc = require('crc');
 
@@ -32,8 +32,12 @@ module.exports = function(grunt) {
     };
 
     urlParse = function(url) {
-      var m = url.match(/(url\( *['"]?)(([A-Za-z0-9_\-\.\/:]+)(\.(jpe?g|png|gif|svg)))(['"]? *\))/i);
+      var m = url.match(/(url\( *['"]?)(([A-Za-z0-9_\-\.\/:;,]+)(\.(jpe?g|png|gif|svg)))(['"]? *\))/i);
       return m ? {url: m[0], prefix: m[1], file: m[2], base: m[3], ext: m[5], sufix: m[6]} : null;
+    };
+
+    isBase64 = function(url) {
+      return url.match(/data:[a-z\-]+\/[a-z]+;base64,/) ? true : false;
     };
 
     isLocalFile = function(filePath) {
@@ -56,7 +60,16 @@ module.exports = function(grunt) {
           var parsedUrl, filePath, checksum, replacement;
 
           parsedUrl = urlParse(url);
-          if (isLocalFile(parsedUrl.file)) {
+
+          if (!parsedUrl) {
+            if (isBase64(url)) {
+              grunt.verbose.writeln('Skipping "' + url + '" - base64');
+            } else {
+              grunt.log.warn('Cannot parse "' + url + '"');
+            }
+          } else if (!isLocalFile(parsedUrl.file)) {
+            grunt.verbose.writeln('Skipping "' + parsedUrl.file + '" - not a local file');
+          } else {
             filePath = basePath + parsedUrl.file;
             if (grunt.file.exists(filePath)) {
               checksum = generateChecksum(filePath, options.algorithm);
@@ -65,8 +78,6 @@ module.exports = function(grunt) {
             } else {
               grunt.log.warn('Asset file "' + filePath + '" not found.');
             }
-          } else {
-            grunt.verbose.writeln('Skipping "' + parsedUrl.file + '"');
           }
 
         });

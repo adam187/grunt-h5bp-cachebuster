@@ -1,0 +1,6 @@
+body.skip-me-baby {
+    background: #fff url(data:image/gif;base64,skipMebabyCauseImbase64) repeat-x bottom;
+    background: #fff url('data:image/gif;base64,skipMebabyCauseImbase64') repeat-x bottom;
+    background: #fff url("data:image/gif;base64,skipMebabyCauseImbase64") repeat-x bottom;
+    background: #fff url( "data:image/gif;base64,skipMebabyCauseImbase64" ) repeat-x bottom;
+}
