@@ -6,7 +6,7 @@ var grunt = require('grunt');
 exports.h5bp_cachebuster = {
 
   css_bust: function(test) {
-    test.expect(5);
+    test.expect(7);
 
     var taskConfig = grunt.config.get('h5bp_cachebuster.css_bust_all_files'),
         expectedConfig = {
@@ -19,7 +19,7 @@ exports.h5bp_cachebuster = {
 
     test.deepEqual(taskConfig, expectedConfig, 'config sould be the same');
 
-    ['style.css', 'print.css'].forEach(function(file) {
+    ['style.css', 'print.css', 'min.css'].forEach(function(file) {
       var actual, expected;
       test.ok(grunt.file.exists('tmp/css/' + file), 'should create ' + file + ' file');
       actual = grunt.file.read('tmp/css/' + file);
