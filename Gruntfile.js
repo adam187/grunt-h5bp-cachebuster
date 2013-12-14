@@ -26,7 +26,7 @@ module.exports = function(grunt) {
     },
 
     h5bp_cachebuster: {
-      css_bust: {
+      css_bust_all_files: {
         expand: true,
         cwd: 'tests/fixtures',
         src: 'css/*.css',
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
 
     // Unit tests.
     nodeunit: {
-      tests: ['test/*_test.js'],
+      tests: ['tests/*_test.js'],
     },
 
   });
