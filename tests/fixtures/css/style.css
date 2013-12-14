@@ -19,3 +19,10 @@ footer {
   background-image: url("../images/subDir/footer.png");
   background-image: url( "../images/subDir/footer.png" );
 }
+
+.remote-file {
+  background-image: url(http://dummy.domain/images/dummy-dir/dummy-image.png);
+  background-image: url('http://dummy.domain/images/dummy-dir/dummy-image.png');
+  background-image: url("http://dummy.domain/images/dummy-dir/dummy-image.png");
+  background-image: url( "http://dummy.domain/images/dummy-dir/dummy-image.png" );
+}
