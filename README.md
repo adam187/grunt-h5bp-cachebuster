@@ -1,6 +1,10 @@
 grunt-h5bp-cachebuster
 ======================
 
+[![Build Status](https://travis-ci.org/adam187/grunt-h5bp-cachebuster.png?branch=master)](https://travis-ci.org/adam187/grunt-h5bp-cachebuster)
+[![Dependency Status](https://david-dm.org/adam187/grunt-h5bp-cachebuster.png)](https://david-dm.org/adam187/grunt-h5bp-cachebuster)
+[![devDependency Status](https://david-dm.org/adam187/grunt-h5bp-cachebuster/dev-status.png)](https://david-dm.org/adam187/grunt-h5bp-cachebuster#info=devDependencies)
+
 > Grunt task to version assets in css files for [html5-boilerplate][h5bp] `.htaccess` snippet
 
 ## Installation
