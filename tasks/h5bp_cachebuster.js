@@ -11,7 +11,7 @@
 module.exports = function(grunt) {
 
   grunt.registerMultiTask('h5bp_cachebuster', 'add assets checksum in css files', function () {
-    var crc, options, findUrls, getBasePath, urlParse, isBase64, isLocalFile, generateChecksum, cssBust;
+    var crc, options, findUrls, getBasePath, urlParse, isBase64, isFont, isLocalFile, generateChecksum, cssBust;
 
     crc = require('crc');
 
@@ -34,6 +34,10 @@ module.exports = function(grunt) {
 
     isBase64 = function(url) {
       return url.match(/data:[a-z\-]+\/[a-z]+;base64,/) ? true : false;
+    };
+
+    isFont = function(url) {
+      return url.match(/\.(eot|ttf|eot|woff)/i) ? true : false;
     };
 
     isLocalFile = function(filePath) {
@@ -60,6 +64,8 @@ module.exports = function(grunt) {
           if (!parsedUrl) {
             if (isBase64(url)) {
               grunt.verbose.writeln('Skipping "' + url + '" - base64');
+            } else if (isFont(url)) {
+              grunt.verbose.writeln('Skipping "' + url + '" - webfont');
             } else {
               grunt.log.warn('Cannot parse "' + url + '"');
             }

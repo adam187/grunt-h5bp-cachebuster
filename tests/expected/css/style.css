@@ -27,6 +27,12 @@ footer {
   background-image: url( "http://dummy.domain/images/dummy-dir/dummy-image.png" );
 }
 
+.webfont {
+    src: url('../webfonts/webfont.eot');
+    src: url('../webfonts/webfont.woff') format('woff');
+    src: url('../webfonts/webfont.ttf') format('truetype');
+}
+
 .duplicates {
   background: url(../images/body.195457394.jpg);
   background: url('../images/body.195457394.jpg');
