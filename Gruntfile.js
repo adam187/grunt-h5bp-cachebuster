@@ -30,8 +30,7 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'tests/fixtures/css/',
         src: '**/*.css',
-        dest: 'tmp/css/',
-        ext: '.css'
+        dest: 'tmp/css/'
       },
     },
 

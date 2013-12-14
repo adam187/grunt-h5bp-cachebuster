@@ -13,8 +13,7 @@ exports.h5bp_cachebuster = {
         expand: true,
         cwd: 'tests/fixtures/css/',
         src: '**/*.css',
-        dest: 'tmp/css/',
-        ext: '.css'
+        dest: 'tmp/css/'
       };
 
     test.deepEqual(taskConfig, expectedConfig, 'config sould be the same');
