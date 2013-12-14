@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     crc = require('crc');
 
     options = this.options({
-      algorithm: 'crc16'
+      algorithm: 'crc32'
     });
 
     onlyUnique = function (value, index, self) {
