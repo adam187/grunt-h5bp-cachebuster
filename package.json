@@ -11,7 +11,12 @@
     "url": "https://github.com/adam187/grunt-h5bp-cachebuster.git"
   },
   "keywords": [
-    "cachebuster", "grunt", "gruntplugin", "crc", "css", "h5bp"
+    "cachebuster",
+    "grunt",
+    "gruntplugin",
+    "crc",
+    "css",
+    "h5bp"
   ],
   "author": {
     "name": "Adam Misiorny",
@@ -29,7 +34,7 @@
     "crc": "~0.2.1"
   },
   "peerDependencies": {
-    "grunt": "~0.4.0"
+    "grunt": ">=0.4.0"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.8.0",
